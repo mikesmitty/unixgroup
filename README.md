@@ -11,7 +11,7 @@ Set the USER env variable to the user to be checked, and GROUP to a space-delimi
     $ export USER="michael"
     $ export GROUP="testgroup users wheel"
 
-
+Check the group membership
 
     $ unixgroup
     $ echo $?
