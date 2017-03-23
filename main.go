@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"os/user"
 	"strconv"
@@ -59,7 +60,12 @@ func main() {
 			}
 		} else {
 			// Group is a group name
+			fmt.Printf("v: %s\n", v)
 			g, err := user.LookupGroup(v)
+			if err != nil {
+				// Group is invalid
+				continue
+			}
 			ggid, err := strconv.ParseInt(g.Gid, 10, 64)
 			if err != nil {
 				// Group doesn't exist or gid isn't numeric
