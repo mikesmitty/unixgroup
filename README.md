@@ -6,10 +6,10 @@ Group membership checking tool, inspired by Jan Wolter's pwauth/unixgroup tools
     $ groups michael
     michael users
 
-Set the USER env variable to the user to be checked, and GROUP to a space-delimited list of groups to check against
+Set the USER env variable to the user to be checked, and GROUP to a comma-separated list of groups to check against
 
     $ export USER="michael"
-    $ export GROUP="testgroup users wheel"
+    $ export GROUP="testgroup,users,wheel"
 
 Check the group membership
 
