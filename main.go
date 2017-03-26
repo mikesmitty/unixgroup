@@ -15,7 +15,7 @@ func main() {
 		os.Exit(3)
 	}
 	gl := strings.Split(os.Getenv("GROUP"), ",")
-	if len(gl) < 1 {
+	if len(gl) == 0 || gl[0] == "" {
 		os.Exit(4)
 	}
 
